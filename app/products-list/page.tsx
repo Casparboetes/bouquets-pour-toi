@@ -1,11 +1,10 @@
 import type { GetBouquets } from '@/app/types/products.models';
 import ProductCard from '@/app/components/ProductCard';
 
-// Is used for static rending for demonstration purposes
 const ProductsList = async () => {
-    const res: Response = await fetch('http://localhost:3000/api/products', {
-        next: { revalidate: 5 },
-    });
+    const res: Response = await fetch('http://localhost:3000/api/products',
+    { cache: 'no-store' }
+    );
     const products: GetBouquets = await res.json();
 
     return (
