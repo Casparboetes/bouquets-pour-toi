@@ -1,7 +1,6 @@
 import ProductCard from '@/app/components/ProductCard';
 import type { GetBouquets } from '@/app/types/products.models';
 import Toggle from '@/app/components/Toggle';
-import { useToggle } from '@uidotdev/usehooks';
 
 const FlowerList = ({
     products,
